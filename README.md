@@ -7,6 +7,7 @@ Un encriptador de texto desarrollado en HTML, CSS y JavaScript. Este proyecto es
 - [Descripción](#descripción)
 - [Características](#características)
 - [Uso](#uso)
+- [Sobre el Desarrollador](#sobre-el-desarrollador)
 
 ## Descripción
 
@@ -27,3 +28,9 @@ Este encriptador de texto permite a los usuarios convertir mensajes de texto en 
 2. **Ingresar Texto**: Escribe el texto que deseas encriptar o desencriptar en el campo de entrada.
 3. **Encriptar o Desencriptar**: Selecciona la opción deseada (encriptar o desencriptar) y haz clic en el botón correspondiente.
 4. **Ver Resultado**: El texto encriptado o desencriptado se mostrará en el área de resultado.
+
+## Sobre el Desarrollador
+
+<img src="https://github.com/user-attachments/assets/05880886-01b3-49ec-bad3-5553be56523d" alt="Imagen del Desarrollador" style="width: 450px; height: auto;">
+
+*Nombre del Desarrollador*: [Alexander Centeno]
