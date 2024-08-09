@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Krona+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* Esto es para importar una fuente de Google Fonts, en este caso se está importando la fuente Krona One y Montserrat */
+
+* {
+    /* Los asteriscos son un selector universal, afecta a todos los elementos de la página */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* En este caso se está eliminando el margen y el padding por defecto de los elementos de la página */
+/* Esto lo hacemos para que no haya espacios entre los elementos y no se desconfigure la página */
+/* Puede que al usar un navegador, este aplique un margen o padding por defecto a los elementos, por eso es importante resetearlo */
+/* El empleo de reset.css es una buena práctica para evitar problemas de compatibilidad entre navegadores, en este caso se está haciendo manualmente */
+/* Lo que se logra con box-sizing: border-box es que el padding y el borde no se sumen al ancho del elemento, sino que se resten */
+
+/* 1 rem = 16px */
+/* 1 vh = 1% del alto de la ventana */
+
+/* =========================== GENERAL ============================= */
+:root{
+    --color_primario: #FF4191;
+    --color_secundario: #E90074;
+    --color_fondo: #000000;
+    --color_fondo_hover: #272727;
+    --color_parrafo: #FFF078;
+
+    --fuente_titulo: 'Krona One', sans-serif;
+    --fuente_parrafo: 'Open Sans', sans-serif;
+    --fuente_firma: 'Grey Qo', sans-serif;
+}
+
+/* =========================== Body ============================= */
+body{
+    background-color: var(--color_fondo);
+    color: var(--color_parrafo);
+    box-sizing: border-box;
+}
+
+/* =========================== Header ============================= */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background-color: var(--color_primario);
+    height: 7.5vh;
+}
+
+.titulo {
+    color: var(--color_parrafo);
+    text-align: center;
+    font-family: var(--fuente_titulo);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* =========================== Main ============================= */
+.presentacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5% 5%;
+    gap: 10%;
+    /*Para que la presentacion que es el body del html abarque toda la ventana:*/
+    height: 85vh;
+}
+
+.area_ingreso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 95%;
+    gap: 20px;
+}
+
+.area_texto_ingreso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: var(--color_parrafo); /* Color de fondo */
+    border: 2px solid var(--color_secundario); /* Borde con color y grosor */
+    border-radius: 5px;     /* Bordes redondeados */
+    padding: 10px;          /* Espacio interior */
+    position: relative; /* Con esto logramos que la seccion de ingreso se posicione de manera relativa */
+}
+
+/* Selecciona el elemento con la clase 'texto_ingreso' y el id 'texto' */
+.texto_ingreso#texto {
+    width: 100%;           /* Ancho del textarea */
+    height: 100%;          /* Alto del textarea */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    font-size: 1.5rem;        /* Tamaño de letra */
+    background-color: transparent;
+    border: none;
+    color: var(--color_fondo);            /* Color del texto */
+    resize: none;           /* Deshabilitar el redimensionamiento */
+    outline: none;
+}
+
+.btn_limpiar {
+    height: 15%;
+    /* Para que esté encima del área de texto y del area_texto_ingreso */
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    right: 2.5%;
+    bottom: 3.5%;
+    /* Sombra alrededor del contorno de la imagen */
+    filter: drop-shadow(0px 4px 10px var(--color_primario));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.btn_limpiar:hover {
+    filter: drop-shadow(0px 6px 15px var(--color_secundario));
+    transform: scale(1.1);
+}
+
+.advertencia{
+    width: 100%;
+    display:flex;
+    justify-content: left;
+    text-align: left;
+    font-size: 0.8rem;
+    color: var(--fuente_parrafo);
+}
+
+.botones{
+    display: flex;
+    width: 80%;
+    height: 12.5%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn_enc{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    width: 45%;
+    text-align: center;
+    font-family: var(--fuente_parrafo);
+    font-size: 1.5rem;
+    color: var(--color_parrafo);
+    background-color: var(--color_primario);
+    border: 2px solid;
+    border-color: var(--color_secundario);
+    border-radius: 24px;
+    justify-content: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.btn_enc:hover{
+    background-color: var(--color_fondo_hover);
+    transform: scale(1.1);
+}
+
+.btn_des{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    width: 45%;
+    text-align: center;
+    font-family: var(--fuente_parrafo);
+    font-size: 1.5rem;
+    color: var(--color_parrafo);
+    background-color: var(--color_primario);
+    border: 2px solid;
+    border-color: var(--color_secundario);
+    border-radius: 24px;
+    justify-content: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.btn_des:hover{
+    background-color: var(--color_fondo_hover);
+    transform: scale(1.1);
+}
+
+.area_resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 95%;
+    position: relative; /* Con esto logramos que la seccion de resultado se posicione de manera relativa */
+}
+
+.area_texto_resuelto#area_texto_resuelto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;           /* Ancho del textarea */
+    height: 100%;          /* Alto del textarea */
+    background-color: var(--color_parrafo); /* Color de fondo */
+    border: 2px solid var(--color_secundario); /* Borde con color y grosor */
+    border-radius: 5px;     /* Bordes redondeados */
+    padding: 10px;          /* Espacio interior */
+}
+
+.texto_resuelto{
+    width: 100%;           /* Ancho del textarea */
+    height: 85%;
+    color: var(--color_fondo);
+    font-family: var(--fuente_parrafo);
+    font-size: 1rem;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.area_texto_resuelto_elementos{
+    width: 85%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+    position: absolute; /* Con esto logramos que los elementos de la seccion de resultado se posicione de manera absoluta */
+    /*Para que este justo en el centro del elemento padre:*/
+    top: 15%;
+}
+
+.area_texto_imagen{
+    height: 80%;
+}
+
+.area_texto_indicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mensaje{
+    color: var(--color_fondo);
+    font-size: 1.5rem;
+    font-family: var(--fuente_titulo);
+}
+
+.instruccion{
+    color: var(--color_fondo);
+    font-size: 1rem;
+    font-family: var(--fuente_parrafo);
+}
+
+.btn_cop{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 45%;
+    text-align: center;
+    font-family: var(--fuente_parrafo);
+    font-size: 1rem;
+    color: var(--color_parrafo);
+    background-color: var(--color_primario);
+    border: 2px solid;
+    border-color: var(--color_secundario);
+    border-radius: 24px;
+    justify-content: center;
+    z-index: 1;
+    position: absolute; /* Con esto logramos que los elementos de la seccion de resultado se posicione de manera absoluta */
+    /*Para que este justo en el centro del elemento padre:*/
+    bottom: 2.5%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.btn_cop:hover{
+    background-color: var(--color_fondo_hover);
+    transform: scale(1.1);
+}
+/* =========================== Footer ============================= */
+.rodapie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background-color: var(--color_primario);
+    height: 7.5vh;
+}
+
+.firma{
+    color: var(--color_parrafo);
+    text-align: center;
+    font-family: var(--fuente_firma);
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+/* =========================== Media Queries ============================= */
+
+@media(max-width: 1200px){
+
+    .titulo {
+        font-size: 1.25rem;
+    }
+
+    .presentacion{
+        flex-direction: column;
+        padding: 6.25% 5%;
+        gap: 10%;
+    }
+
+    .area_ingreso{
+        width: 100%;
+        height: 80%;
+        gap: 10px;
+    }
+
+    .area_texto_ingreso#texto {
+        width: 100%;           /* Ancho del textarea */
+        height: 80%;          /* Alto del textarea */
+    }
+
+    .btn_limpiar{
+        height: 20%;
+    }
+
+    .botones{
+        width: 100%;
+        height: 15%;
+        gap: 10px;
+    }
+
+    .btn_enc{
+        width: 100%;
+    }
+
+    .btn_des{
+        width: 100%;
+    }
+
+    .area_resultado{
+        width: 100%;
+        height: 82.5%;
+        gap: 5%;
+    }
+
+    .area_texto_resuelto {
+        width: 100%;           /* Ancho del textarea */
+        height: 100%;          /* Alto del textarea */
+    }
+
+    .area_texto_resuelto_elementos{
+        top: 10%;
+        height: 80%;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .area_texto_imagen{
+        /* que se elimine la imagen */
+        height: 100%;
+    }
+    
+    .mensaje{
+        font-size: 0.75rem;
+    }
+
+    .instruccion{
+        font-size: 0.5rem;
+    }
+
+    .btn_cop{
+        height: 15%;
+        width: 80%;
+    }
+    
+    .firma{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 400px){
+    .botones{
+        flex-direction: column;
+    }
+}

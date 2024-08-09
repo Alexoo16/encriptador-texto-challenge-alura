@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <p class="titulo">Encriptador / Desencriptador</p>
+    </header>
+
+    <main class="presentacion">
+        <section class="area_ingreso">
+            <section class="area_texto_ingreso">
+                <textarea class="texto_ingreso" name="texto" id="texto">Ingrese el texto aquí</textarea>
+                <!-- Creamos un boton que tenga como imagen a ./assets/imagen_limpiar.png -->
+                <img src="./assets/imagen_limpiar.png" onclick="limpiar();" alt="Limpiar" class="btn_limpiar" id="btn_limpiar">               
+            </section>
+            <p class="advertencia">Sólo letras minúsculas y sin acento</p>
+            <div class="botones">
+                <button onclick="btn_encriptar();" class="btn_enc" id="btn_encriptar">Encriptar</button>
+                <button onclick="btn_desencriptar();" class="btn_des" id="btn_desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="area_resultado">
+            <section class="area_texto_resuelto" name="area_texto_resuelto" id="area_texto_resuelto">
+                <textarea class="texto_resuelto" name="texto_resuelto" id="texto_resuelto" readonly></textarea>
+                <section class="area_texto_resuelto_elementos" id="area_texto_resuelto_elementos">
+                    <img class="area_texto_imagen" src="./assets/persona_leyendo_dibujo3.png" alt="icono_persona_leyendo">
+                    <div class="area_texto_indicacion">
+                        <p class="mensaje">Ningún mensaje fue encontrado</p>
+                        <p class="instruccion">Ingrese el texto que desee encriptar o desencriptar</p>
+                    </div>
+                </section>
+            </section>
+            <button onclick="btn_copiar();" class="btn_cop" id="btn_copiar">Copiar</button>
+        </section>
+    </main>
+
+    <footer class="rodapie">
+        <p class="firma">Desarrollado por Alexoo</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
