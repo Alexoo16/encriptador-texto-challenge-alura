@@ -27,12 +27,3 @@ Este encriptador de texto permite a los usuarios convertir mensajes de texto en 
 2. **Ingresar Texto**: Escribe el texto que deseas encriptar o desencriptar en el campo de entrada.
 3. **Encriptar o Desencriptar**: Selecciona la opción deseada (encriptar o desencriptar) y haz clic en el botón correspondiente.
 4. **Ver Resultado**: El texto encriptado o desencriptado se mostrará en el área de resultado.
-
-```html
-<!-- Ejemplo de uso -->
-<form>
-  <textarea id="inputText" placeholder="Ingresa tu texto aquí"></textarea>
-  <button type="button" onclick="encryptText()">Encriptar</button>
-  <button type="button" onclick="decryptText()">Desencriptar</button>
-  <textarea id="outputText" readonly></textarea>
-</form>
