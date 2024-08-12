@@ -15,11 +15,11 @@
     <main class="presentacion">
         <section class="area_ingreso">
             <section class="area_texto_ingreso">
-                <textarea class="texto_ingreso" name="texto" id="texto">Ingrese el texto aquí</textarea>
+                <textarea class="texto_ingreso" name="texto" id="texto" placeholder="Ingrese el texto aquí"></textarea>
                 <!-- Creamos un boton que tenga como imagen a ./assets/imagen_limpiar.png -->
                 <img src="./assets/imagen_limpiar.png" onclick="limpiar();" alt="Limpiar" class="btn_limpiar" id="btn_limpiar">               
             </section>
-            <p class="advertencia">Sólo letras minúsculas y sin acento</p>
+            <p class="advertencia">Sólo se permiten letras, números y algunos caracteres especiales ( . , ; : ! ¡ ? ¿ )</p>
             <div class="botones">
                 <button onclick="btn_encriptar();" class="btn_enc" id="btn_encriptar">Encriptar</button>
                 <button onclick="btn_desencriptar();" class="btn_des" id="btn_desencriptar">Desencriptar</button>
@@ -42,6 +42,11 @@
 
     <footer class="rodapie">
         <p class="firma">Desarrollado por Alexoo</p>
+        <div class="enlaces">
+            <a class="link" href="https://www.linkedin.com/in/alexander-jesús-centeno-cerna-a00a81259/" target="_blank"><img class="icono" src="assets/logo_linkedin.png"></a>
+            <a class="link" href="https://github.com/Alexoo16" target="_blank"><img class="icono" src="assets/logo_github.png"></a>
+            <a class="link" href="https://www.instagram.com/alexoo_mar/" target="_blank"><img class="icono" src="assets/logo_instagram.png"></a>
+        </div>
     </footer>
 
     <script src="app.js"></script>

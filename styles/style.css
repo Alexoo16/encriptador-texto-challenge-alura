@@ -284,6 +284,7 @@ body{
     justify-content: center; /* Centra el contenido horizontalmente */
     background-color: var(--color_primario);
     height: 7.5vh;
+    gap: 10px;
 }
 
 .firma{
@@ -292,6 +293,27 @@ body{
     font-family: var(--fuente_firma);
     font-size: 3rem;
     font-weight: 400;
+}
+
+.enlaces{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 50%;
+}
+
+.link{
+    height: 100%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.link:hover{
+    transform: scale(1.1);
+}
+
+.icono{
+    height: 100%;
 }
 
 /* =========================== Media Queries ============================= */
@@ -385,6 +407,10 @@ body{
 }
 
 @media(max-width: 400px){
+    .area_texto_ingreso#texto {
+        font-size: 0.5rem;
+    }
+
     .botones{
         flex-direction: column;
     }

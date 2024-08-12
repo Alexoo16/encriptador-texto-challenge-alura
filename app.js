@@ -2,8 +2,10 @@ const text_area=document.querySelector("#texto");
 const texto_resuelto=document.querySelector("#texto_resuelto");
 const btn_limpiar=document.querySelector("#btn_limpiar");
 // Texto por defecto
-const defaultText = "Ingrese el texto aquí";
-
+//const defaultText = "Ingrese el texto aquí";  Antes se usaba el texto por defecto, ahora no por el uso de placeholder
+/*
+- Estas funciones se encargaban de borrar el texto por defecto al hacer clic en el área de texto y de restablecerlo si el área de texto está vacía.
+- Sin embargo, se ha optado por no utilizarlas, ya que se puede emplear un marcador de posición en el área de texto para mostrar el texto por defecto (o tambien llamado placeholder) en html.
 // Añade un evento de foco para borrar el texto por defecto
 text_area.addEventListener('focus', function() {
     if (text_area.value === defaultText) {
@@ -17,16 +19,17 @@ text_area.addEventListener('blur', function() {
         text_area.value = defaultText; // Restablece el texto por defecto
     }
 });
-
+*/
 // limpiar el texto
 function limpiar(){
-    text_area.value=defaultText;
+    //text_area.value=defaultText;  Antes se usaba el texto por defecto, ahora no por el uso de placeholder
+    text_area.value='';
 }
 
 /* El texto a encriptar solo debe contener letras minúsculas y no debe contener caracteres especiales. */
 /* Para ello cree una funcion que valide el texto ingresado. */
 function validarTexto(texto){
-    let letras = /^[a-zñ\s]+$/;
+    let letras = /^[a-zñ0-9\s.,;:!?¡¿]+$/;
     return letras.test(texto);
 }
 
