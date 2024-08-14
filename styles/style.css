@@ -88,11 +88,11 @@ body{
 }
 
 /* Selecciona el elemento con la clase 'texto_ingreso' y el id 'texto' */
-.texto_ingreso#texto {
+.texto_ingreso {
     width: 100%;           /* Ancho del textarea */
     height: 100%;          /* Alto del textarea */
     font-family: var(--fuente_parrafo); /* Tipo de letra */
-    font-size: 1.5rem;        /* Tamaño de letra */
+    font-size: 1.5rem;    /* Tamaño de la letra */
     background-color: transparent;
     border: none;
     color: var(--color_fondo);            /* Color del texto */
@@ -190,7 +190,7 @@ body{
     position: relative; /* Con esto logramos que la seccion de resultado se posicione de manera relativa */
 }
 
-.area_texto_resuelto#area_texto_resuelto {
+.area_texto_resuelto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -326,12 +326,12 @@ body{
     .presentacion{
         flex-direction: column;
         padding: 6.25% 5%;
-        gap: 10%;
+        gap: 5%;
     }
 
     .area_ingreso{
         width: 100%;
-        height: 80%;
+        height: 100%;
         gap: 10px;
     }
 
@@ -341,7 +341,7 @@ body{
     }
 
     .texto_ingreso{
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .btn_limpiar{
@@ -350,15 +350,17 @@ body{
 
     .botones{
         width: 100%;
-        height: 15%;
+        height: 12.5%;
         gap: 5%;
     }
 
     .btn_enc{
+        font-size: 1.25rem;
         width: 100%;
     }
 
     .btn_des{
+        font-size: 1.25rem;
         width: 100%;
     }
 
@@ -383,7 +385,6 @@ body{
     }
 
     .area_texto_imagen{
-        /* que se elimine la imagen */
         height: 100%;
     }
     
@@ -406,11 +407,46 @@ body{
 }
 
 @media(max-width: 400px){
-    .area_texto_ingreso#texto {
-        font-size: 0.5rem;
+    .presentacion{
+        padding: 10% 5%;
+        gap: 5%;
+    }
+
+    .texto_ingreso {
+        font-size: 1rem;
     }
 
     .botones{
         flex-direction: column;
+    }
+
+    .btn_enc{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .btn_des{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .firma{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media(max-width: 320px){
+    .titulo {
+        font-size: 1rem;
+    }
+
+    .area_texto_imagen{
+        height: 70%;
+        width: 50%;
+    }
+
+    .advertencia{
+        font-size: 0.5rem;
     }
 }
