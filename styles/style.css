@@ -100,6 +100,21 @@ body{
     outline: none;
 }
 
+.btn_pegar {
+    height: 15%;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    left: 2.5%;
+    bottom: 3.5%;
+    filter: drop-shadow(0px 4px 10px var(--color_primario));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.btn_pegar:hover {
+    filter: drop-shadow(0px 6px 15px var(--color_secundario));
+    transform: scale(1.1);
+}
+
 .btn_limpiar {
     height: 15%;
     /* Para que esté encima del área de texto y del area_texto_ingreso */
