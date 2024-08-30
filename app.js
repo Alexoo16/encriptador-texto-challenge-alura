@@ -26,6 +26,21 @@ function limpiar(){
     text_area.value='';
 }
 
+function pegar() {
+    // Verificamos si el navegador soporta la API del portapapeles
+    if (navigator.clipboard) {
+        navigator.clipboard.readText().then(text => {
+            // Insertamos el texto copiado en el área de texto
+            document.getElementById("texto").value = text;
+        })
+        .catch(err => {
+            console.error('Error al leer el portapapeles:', err);
+        });
+    } else {
+        alert("La función de pegar no es soportada por tu navegador.");
+    }
+}
+
 /* El texto a encriptar solo debe contener letras minúsculas y no debe contener caracteres especiales. */
 /* Para ello cree una funcion que valide el texto ingresado. */
 function validarTexto(texto){
